@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public int codigo;
+    private float numCaracteres;
+    private float tamanhoBase;
 
     private bool isInField = false;
     private Transform fieldTransform;
@@ -16,9 +19,23 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private bool estaDentro;
     private bool estaArrastando;
 
+    private bool foiTocado;
+
+    void Start()
+    {
+        Text text = GetComponent<Text>();
+        numCaracteres = text.text.Length;
+        Debug.Log(numCaracteres);
+        
+        tamanhoBase = 40f;
+        RectTransform t = GetComponent<RectTransform>();
+        t.sizeDelta = (Vector2) new Vector2((tamanhoBase * numCaracteres), 60f);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        //Desktop
         if (estaDentro && Input.GetKeyDown(KeyCode.Mouse0))
         {
             estaArrastando = true;
@@ -40,6 +57,21 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
             estaArrastando = false;
             isInField = false;
         }
+
+        //Android
+        if(Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0); 
+            if (touch.position.Equals(GetComponent<RectTransform>())){
+                //Vector3 touchPosition = cameraPrincipal.ScreenToWorldPoint(touch.position);
+                foiTocado = true;
+            }
+        }
+        if (foiTocado)
+        {
+            Touch touch = Input.GetTouch(0);
+            transform.position = cameraPrincipal.ScreenToWorldPoint(touch.position);
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -54,8 +86,6 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("teste1");
-
         this.fieldTransform = other.GetComponent<Transform>();
         this.isInField = true;
     }
