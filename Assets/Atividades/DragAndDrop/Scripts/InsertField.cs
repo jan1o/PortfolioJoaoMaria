@@ -6,14 +6,15 @@ using UnityEngine.UI;
 public class InsertField : MonoBehaviour
 {
     public int codigo;
-    public float NumCaracteres; //O tamanho (em caracteres) do seu field;
+    //public float NumCaracteres; //O tamanho (em caracteres) do seu field;
     private float tamanhoBase; //O tamanho base de um caractere;
 
     void Start()
     {
         tamanhoBase = 0.1f;
+        /*
         Transform t = GetComponent<Transform>();
-        t.localScale = (Vector3) new Vector3((tamanhoBase * NumCaracteres), tamanhoBase, 0);
+        t.localScale = (Vector3) new Vector3((tamanhoBase * NumCaracteres), tamanhoBase, 0); */
 
 
     }
@@ -28,6 +29,13 @@ public class InsertField : MonoBehaviour
         {
             collision.GetComponent<Text>().color = Color.red;
         }
+    }
+
+    public void AjustarTamanho(float numeroCaracteres)
+    {
+        tamanhoBase = 0.1f;
+        Transform t = GetComponent<Transform>();
+        t.localScale = (Vector3)new Vector3((tamanhoBase * numeroCaracteres), tamanhoBase, 0);
     }
 
 }

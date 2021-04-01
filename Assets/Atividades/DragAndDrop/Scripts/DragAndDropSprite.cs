@@ -23,9 +23,10 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void Start()
     {
-        Text text = GetComponent<Text>();
-        numCaracteres = text.text.Length;
-        Debug.Log(numCaracteres);
+        cameraPrincipal = FindObjectOfType<Camera>();
+        canvas = FindObjectOfType<Canvas>();
+
+        numCaracteres = ContaCaracteres();
         
         tamanhoBase = 40f;
         RectTransform t = GetComponent<RectTransform>();
@@ -88,6 +89,20 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         this.fieldTransform = other.GetComponent<Transform>();
         this.isInField = true;
+    }
+
+    public float ContaCaracteres()
+    {
+        Text text = GetComponent<Text>();
+        float num = text.text.Length;
+        return num;
+    }
+
+    public float GetNumCaracteres()
+    {
+        float num = ContaCaracteres();
+        Debug.Log(num);
+        return num;
     }
 
 }
