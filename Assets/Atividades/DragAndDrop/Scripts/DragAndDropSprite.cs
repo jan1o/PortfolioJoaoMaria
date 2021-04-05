@@ -21,6 +21,9 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private bool foiTocado;
 
+    //Variaveis que dizem se esta no campo correto
+    private bool campoCorreto;
+
     void Start()
     {
         cameraPrincipal = FindObjectOfType<Camera>();
@@ -31,6 +34,8 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
         tamanhoBase = 40f;
         RectTransform t = GetComponent<RectTransform>();
         t.sizeDelta = (Vector2) new Vector2((tamanhoBase * numCaracteres), 60f);
+
+        campoCorreto = false;
     }
 
     // Update is called once per frame
@@ -89,6 +94,28 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         this.fieldTransform = other.GetComponent<Transform>();
         this.isInField = true;
+
+        InsertField field = other.GetComponent<InsertField>();
+        if (field.codigo == this.codigo)
+        {
+            GetComponentInParent<Text>().color = Color.green;
+            if (!campoCorreto)
+            {
+                campoCorreto = true;
+                Manager man = FindObjectOfType<Manager>();
+                man.RegistrarAcerto(1);
+            }
+        }
+        else
+        {
+            GetComponentInParent<Text>().color = Color.red;
+            if (campoCorreto)
+            {
+                campoCorreto = false;
+                Manager man = FindObjectOfType<Manager>();
+                man.RegistrarAcerto(-1);
+            }
+        }
     }
 
     public float ContaCaracteres()

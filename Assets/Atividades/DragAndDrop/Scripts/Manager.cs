@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
 
     public List<InsertField> insertFields;
     public List<DragAndDropSprite> dragAndDrops;
+
+    public int nextScene;
+    private int qtdFields;
+    public int acertos;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +29,8 @@ public class Manager : MonoBehaviour
         }
 
         AssertCodigos();
+
+        qtdFields = insertFields.Count; 
     }
 
     // Update is called once per frame
@@ -45,4 +52,19 @@ public class Manager : MonoBehaviour
             }
         }
     }
+
+    //soma 1 se acertou e diminui 1 se tirou um campo correto do lugar.
+    public void RegistrarAcerto(int valor)
+    {
+        acertos += valor;
+        if(acertos == qtdFields)
+        {
+            NextLevel();
+        }
+    }
+
+    private void NextLevel()
+    {
+        SceneManager.LoadScene(nextScene);
+    } 
 }
