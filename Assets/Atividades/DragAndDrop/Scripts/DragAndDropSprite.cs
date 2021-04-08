@@ -57,6 +57,7 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
             estaArrastando = false;
         }
 
+        // Esse if funciona para os dois
         if (isInField)
         {
             GetComponent<RectTransform>().position = fieldTransform.position;
@@ -92,11 +93,12 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         this.fieldTransform = other.GetComponent<Transform>();
         this.isInField = true;
 
         InsertField field = other.GetComponent<InsertField>();
-        if (field.codigo == this.codigo)
+        if (this.codigo == field.codigo)
         {
             GetComponentInParent<Text>().color = Color.green;
             if (!campoCorreto)

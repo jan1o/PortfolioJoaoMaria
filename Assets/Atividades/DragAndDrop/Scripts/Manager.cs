@@ -56,6 +56,19 @@ public class Manager : MonoBehaviour
     //soma 1 se acertou e diminui 1 se tirou um campo correto do lugar.
     public void RegistrarAcerto(int valor)
     {
+        //Alterar barra de progresso
+        int qtd = insertFields.Count;
+        BarraProgressao barra = FindObjectOfType<BarraProgressao>();
+        if(valor > 0)
+        {
+            barra.AlterarValor(100/qtd);
+        }
+        else
+        {
+            barra.AlterarValor((100/qtd)*-1);
+        }
+        
+
         acertos += valor;
         if(acertos == qtdFields)
         {
