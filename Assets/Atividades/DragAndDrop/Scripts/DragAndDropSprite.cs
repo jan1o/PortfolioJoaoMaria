@@ -10,9 +10,6 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private float numCaracteres;
     private float tamanhoBase;
 
-    private bool isInField = false;
-    private Transform fieldTransform;
-
     [SerializeField] private Camera cameraPrincipal;
     [SerializeField] private Canvas canvas;
 
@@ -57,14 +54,6 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
             estaArrastando = false;
         }
 
-        // Esse if funciona para os dois
-        if (isInField)
-        {
-            GetComponent<RectTransform>().position = fieldTransform.position;
-            estaArrastando = false;
-            isInField = false;
-        }
-
         //Android
         if(Input.touchCount > 0)
         {
@@ -93,16 +82,13 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        this.fieldTransform = other.GetComponent<Transform>();
-        this.isInField = true;
-
         InsertField field = other.GetComponent<InsertField>();
         if (this.codigo == field.codigo)
         {
             GetComponentInParent<Text>().color = Color.green;
             if (!campoCorreto)
             {
+                GoToField(other.GetComponent<Transform>());
                 campoCorreto = true;
                 Manager man = FindObjectOfType<Manager>();
                 man.RegistrarAcerto(1);
@@ -118,6 +104,12 @@ public class DragAndDropSprite : MonoBehaviour, IPointerEnterHandler, IPointerEx
                 man.RegistrarAcerto(-1);
             }
         }
+    }
+
+    private void GoToField(Transform t)
+    {
+        GetComponent<RectTransform>().position = t.position;
+        estaArrastando = false;
     }
 
     public float ContaCaracteres()

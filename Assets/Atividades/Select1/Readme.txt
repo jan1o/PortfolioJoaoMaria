@@ -1,0 +1,1 @@
+Lembre-se de exportar as imagens com tamanho em pixels 750x850 a 96 dpi no inkscape
