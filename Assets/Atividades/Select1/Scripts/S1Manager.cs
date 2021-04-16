@@ -12,7 +12,7 @@ public class S1Manager : MonoBehaviour
 
     public Sprite desenhoCorreto;
 
-    public Scene proximaCena;
+    public int proximaCena;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,6 @@ public class S1Manager : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene(proximaCena.name);
+        SceneManager.LoadScene(proximaCena);
     }
 }

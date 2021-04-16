@@ -565,6 +565,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 419808937681692523, guid: 6159a26ca6a6a4242bd30547fecde11e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 848201820}
+    - target: {fileID: 419808937681692523, guid: 6159a26ca6a6a4242bd30547fecde11e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Click
+      objectReference: {fileID: 0}
     - target: {fileID: 419808937681692527, guid: 6159a26ca6a6a4242bd30547fecde11e,
         type: 3}
       propertyPath: m_Name
@@ -628,8 +638,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 36f67cccdbb807244b4c32ecce27e75f, type: 3}
   - {fileID: 21300000, guid: 33157dcd2d4d708439f586a7b15d6c4b, type: 3}
   desenhoCorreto: {fileID: 21300000, guid: 2fe1ac023c384f641bd46c89ecdbf7b3, type: 3}
-  proximaCena:
-    m_Handle: 0
+  proximaCena: 0
 --- !u!4 &848201821
 Transform:
   m_ObjectHideFlags: 0
@@ -755,6 +764,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 419808937681692523, guid: 6159a26ca6a6a4242bd30547fecde11e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 848201820}
+    - target: {fileID: 419808937681692523, guid: 6159a26ca6a6a4242bd30547fecde11e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Click
       objectReference: {fileID: 0}
     - target: {fileID: 419808937681692527, guid: 6159a26ca6a6a4242bd30547fecde11e,
         type: 3}
@@ -892,6 +911,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 419808937681692523, guid: 6159a26ca6a6a4242bd30547fecde11e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 848201820}
+    - target: {fileID: 419808937681692523, guid: 6159a26ca6a6a4242bd30547fecde11e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Click
       objectReference: {fileID: 0}
     - target: {fileID: 419808937681692527, guid: 6159a26ca6a6a4242bd30547fecde11e,
         type: 3}

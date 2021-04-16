@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
     public List<InsertField> insertFields;
     public List<DragAndDropSprite> dragAndDrops;
 
-    public int nextScene;
+    public int proximaCena;
     private int qtdFields;
     public int acertos;
 
@@ -31,12 +31,6 @@ public class Manager : MonoBehaviour
         AssertCodigos();
 
         qtdFields = insertFields.Count; 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void AssertCodigos()
@@ -78,6 +72,6 @@ public class Manager : MonoBehaviour
 
     private void NextLevel()
     {
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(proximaCena);
     } 
 }
