@@ -1164,7 +1164,7 @@ PrefabInstance:
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.588
+      value: -4.567
       objectReference: {fileID: 0}
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}
@@ -1216,16 +1216,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 921482464401550079, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
-        type: 3}
-      propertyPath: codigo
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7e862d1e1c2e248a14eaf79fd4717a, type: 3}
 --- !u!224 &353384771 stripped
@@ -1249,7 +1239,7 @@ PrefabInstance:
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.017
+      value: -4.008
       objectReference: {fileID: 0}
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}
@@ -3150,7 +3140,7 @@ PrefabInstance:
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.07
+      value: -2.064
       objectReference: {fileID: 0}
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}
@@ -4557,7 +4547,7 @@ PrefabInstance:
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.009
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 921482464401550075, guid: fe7e862d1e1c2e248a14eaf79fd4717a,
         type: 3}

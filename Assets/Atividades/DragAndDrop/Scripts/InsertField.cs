@@ -7,13 +7,15 @@ public class InsertField : MonoBehaviour
 {
     public int codigo;
     //public float NumCaracteres; //O tamanho (em caracteres) do seu field;
-    private float tamanhoBase; //O tamanho base de um caractere;
+    //private float tamanhoBase; //O tamanho base de um caractere;
+    public float baseScaleX;
+    public float baseScaleY;
 
     public bool preenchido;
 
     void Start()
     {
-        tamanhoBase = 0.05f;
+        //tamanhoBase = 0.05f;
         preenchido = false;
         /*
         Transform t = GetComponent<Transform>();
@@ -53,9 +55,9 @@ public class InsertField : MonoBehaviour
 
     public void AjustarTamanho(float numeroCaracteres)
     {
-        tamanhoBase = 0.05f;
+        //tamanhoBase = 0.05f;
         Transform t = GetComponent<Transform>();
-        t.localScale = (Vector3)new Vector3((tamanhoBase * numeroCaracteres), 0.1f, 0);
+        t.localScale = (Vector3)new Vector3((baseScaleX * numeroCaracteres), baseScaleY, 0);
     }
 
 }
