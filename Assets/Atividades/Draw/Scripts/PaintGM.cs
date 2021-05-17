@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PaintGM : MonoBehaviour
 {
@@ -25,5 +26,10 @@ public class PaintGM : MonoBehaviour
         {
             Instantiate(baseDot, objPosition, baseDot.rotation);
         }
+    }
+
+    public void NextScene(int cena)
+    {
+        SceneManager.LoadScene(cena);
     }
 }
