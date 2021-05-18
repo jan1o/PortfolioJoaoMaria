@@ -10,6 +10,8 @@ public class PaintGM : MonoBehaviour
     public KeyCode mouseLeft;
     public static string toolType;
 
+    public int proximaCena;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +30,8 @@ public class PaintGM : MonoBehaviour
         }
     }
 
-    public void NextScene(int cena)
+    public void NextScene()
     {
-        SceneManager.LoadScene(cena);
+        SceneManager.LoadScene(proximaCena);
     }
 }
