@@ -13,9 +13,13 @@ public class Manager : MonoBehaviour
     private int qtdFields;
     public int acertos;
 
+    public GameObject btnProximo;
+
     // Start is called before the first frame update
     void Start()
     {
+        btnProximo.SetActive(false);
+
         insertFields = new List<InsertField>();
         foreach(InsertField item in FindObjectsOfType<InsertField>())
         {
@@ -66,12 +70,22 @@ public class Manager : MonoBehaviour
         acertos += valor;
         if(acertos == qtdFields)
         {
-            NextLevel();
+            InvertButtonNextActivity();
         }
     }
 
-    private void NextLevel()
+    public void InvertButtonNextActivity()
+    {
+        btnProximo.SetActive(!btnProximo.activeSelf);
+    }
+
+    public void NextLevel()
     {
         SceneManager.LoadScene(proximaCena);
     } 
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
