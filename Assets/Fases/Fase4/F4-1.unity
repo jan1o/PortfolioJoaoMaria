@@ -423,7 +423,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9a0607cb5bc642447a3bdb39dfd44c4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2111,7 +2111,7 @@ PrefabInstance:
     - target: {fileID: 7658864550465193007, guid: b6381f28b5d9f4741a62d538f8cfaf82,
         type: 3}
       propertyPath: proximaCena
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6381f28b5d9f4741a62d538f8cfaf82, type: 3}

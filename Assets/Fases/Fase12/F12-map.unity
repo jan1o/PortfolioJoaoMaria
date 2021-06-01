@@ -1242,42 +1242,42 @@ PrefabInstance:
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 819
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 412
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 80.96
+      value: -0.040039062
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 83.29
+      value: 0.29000854
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.9046251
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0.8413334
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.94687504
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0.91822225
       objectReference: {fileID: 0}
     - target: {fileID: 5061711289710482644, guid: c84d04d39e2c24945bef72e2c1ca9ceb,
         type: 3}
@@ -1733,7 +1733,7 @@ PrefabInstance:
     - target: {fileID: 8637289442913534778, guid: 41314281742a3cc4b87c16e6664f6841,
         type: 3}
       propertyPath: proximaCena
-      value: 28
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8637289442913534779, guid: 41314281742a3cc4b87c16e6664f6841,
         type: 3}

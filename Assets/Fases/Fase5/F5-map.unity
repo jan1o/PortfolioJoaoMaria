@@ -1524,7 +1524,7 @@ PrefabInstance:
     - target: {fileID: 8637289442913534778, guid: 41314281742a3cc4b87c16e6664f6841,
         type: 3}
       propertyPath: proximaCena
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8637289442913534779, guid: 41314281742a3cc4b87c16e6664f6841,
         type: 3}

@@ -202,7 +202,7 @@ PrefabInstance:
     - target: {fileID: 7658864550465193007, guid: b6381f28b5d9f4741a62d538f8cfaf82,
         type: 3}
       propertyPath: proximaCena
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6381f28b5d9f4741a62d538f8cfaf82, type: 3}
